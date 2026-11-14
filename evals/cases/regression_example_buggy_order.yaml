@@ -1,0 +1,14 @@
+id: regression_example_buggy_order
+prompt: What is the status of order ORD-1001?
+checks:
+  no_tool_errors: true
+  answer_contains:
+  - processing
+  must_call_tool:
+  - lookup_order
+source:
+  trace: example_buggy_order.jsonl
+  observed_answer: Order ORD-1001 was delivered yesterday.
+  failed_checks:
+  - 'must_call_tool: missing lookup_order'
+  - 'answer_contains: missing ''processing'''

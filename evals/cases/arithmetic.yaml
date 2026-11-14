@@ -1,0 +1,8 @@
+id: arithmetic
+prompt: Calculate 19 * 3 + 2
+checks:
+  must_call_tool: [calculator]
+  answer_contains: ['59']
+  answer_not_contains: ['60']
+  max_steps: 2
+  no_tool_errors: true

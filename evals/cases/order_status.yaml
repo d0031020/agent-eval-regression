@@ -1,0 +1,8 @@
+id: order_status
+prompt: What is the status of order ORD-1002?
+checks:
+  must_call_tool: [lookup_order]
+  answer_contains: [shipped, '2026-11-18']
+  answer_not_contains: [delivered]
+  max_steps: 2
+  no_tool_errors: true
