@@ -247,10 +247,9 @@ Or, with an existing venv and `PYTHONPATH=src`:
 - The optional Anthropic adapter is not covered by tests against the live API.
 - Eval checks are rule-based (tool calls, substrings, step counts), not semantic
   grading.
-- The GitHub Actions workflow has not yet been run on GitHub (the workflow file
-  targets Python 3.12 on `ubuntu-latest`).
-- Tested locally on Python 3.15 only; `requires-python >= 3.10` is declared but
-  older versions are untested.
+- CI passes on Python 3.12 (GitHub Actions, `ubuntu-latest`), and the suite has
+  been run locally on Python 3.15; `requires-python >= 3.10` is declared but
+  other versions are untested.
 
 ## License
 
